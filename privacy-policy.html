@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>隱私權政策 - 餐飲單位換算小幫手</title>
-    <!-- 沿用主頁的 CSS 樣式，確保風格一致 -->
+    <!-- 引用與主頁相同的樣式 -->
     <style>
         :root {
             --bg-color: #f8f9fa;
             --card-bg-color: #ffffff;
             --text-color: #212529;
             --secondary-text-color: #6c757d;
-            --accent-color: #007bff;
+            --accent-color: #007bff; /* 沿用單位換算小幫手的藍色主題 */
             --border-color: #dee2e6;
             --shadow-color: rgba(0, 0, 0, 0.05);
             --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
@@ -25,37 +25,45 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            min-height: 100vh;
             box-sizing: border-box;
+            min-height: 100vh;
         }
         .container {
             width: 100%;
-            max-width: 800px; /* 內容頁面可以稍微寬一點 */
+            max-width: 800px;
             flex-grow: 1;
         }
-        header {
-            text-align: center;
-            margin-bottom: 30px;
-        }
+        header { text-align: center; margin-bottom: 20px; }
         header h1 { font-size: 2.2rem; margin: 0; }
-        main {
+        .card {
             background-color: var(--card-bg-color);
             border-radius: 12px;
-            padding: 25px 35px;
+            padding: 30px;
             box-shadow: 0 4px 15px var(--shadow-color);
             border: 1px solid var(--border-color);
-            line-height: 1.8; /* 增加行高，易於閱讀 */
+            margin-bottom: 20px;
+            line-height: 1.8;
         }
-        main h2 { color: var(--text-color); border-bottom: 1px solid var(--border-color); padding-bottom: 10px; }
-        main p, main ul { color: var(--secondary-text-color); }
-        main a { color: var(--accent-color); text-decoration: none; }
-        main a:hover { text-decoration: underline; }
-        footer {
-            text-align: center;
-            margin-top: 40px;
-            padding-bottom: 20px;
-            color: var(--secondary-text-color);
+        .card h2 {
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 15px;
+            margin-top: 0;
+        }
+        .card a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .card a:hover {
+            text-decoration: underline;
+        }
+        footer { 
+            text-align: center; 
+            margin-top: 40px; 
+            padding: 20px 0; 
+            color: var(--secondary-text-color); 
             font-size: 0.9rem;
+            border-top: 1px solid var(--border-color);
         }
         .footer-links { margin-bottom: 10px; }
         .footer-links a { color: var(--secondary-text-color); text-decoration: none; margin: 0 10px; }
@@ -63,56 +71,42 @@
     </style>
 </head>
 <body>
-
     <div class="container">
         <header>
             <h1>隱私權政策 (Privacy Policy)</h1>
         </header>
 
-        <main>
-            <p><strong>最後更新日期 (Last Updated): 2025-06-27</strong></p>
+        <main class="card">
+            <p>生效日期 (Effective Date): 2025-10-21</p>
 
-            <p>歡迎您使用「餐飲單位換算小幫手」（以下簡稱「本服務」）。我們非常重視您的隱私權，因此制定了本隱私權政策，向您說明我們如何處理資訊。</p>
-            <p>Welcome to Culinary Unit Conversion Helper (the "Service"). Your privacy is important to us. This Privacy Policy explains how we handle information.</p>
+            <h2>資訊收集 (Information Collection)</h2>
+            <p>本網站是一個純客戶端工具。所有您輸入的數值與單位選擇，都只在您的瀏覽器中進行即時運算。我們不會收集、儲存或傳輸任何您輸入的資料。</p>
+            <p>This website is a client-side tool. All values and unit selections you enter are processed in real-time within your browser. We do not collect, store, or transmit any data you input.</p>
 
-            <h2>資訊收集與使用 (Information Collection and Use)</h2>
-            <p>本服務是一個單純的客戶端工具，所有單位換算的計算都在您的瀏覽器中完成。我們不會收集、儲存或傳輸任何您輸入的數值或個人可識別資訊 (PII)。</p>
-            <p>The Service is a client-side tool. All calculations are performed within your browser. We do not collect, store, or transmit any values you enter or any Personally Identifiable Information (PII).</p>
-
-            <h2>第三方廣告 (Third-Party Advertising)</h2>
-            <p>為了支持本服務的營運，我們使用 Google AdSense 在網站上顯示廣告。</p>
-            <p>We use Google AdSense to display advertisements on our website to support our operations.</p>
-            <ul>
-                <li>第三方供應商（包括 Google）會使用 Cookie，根據使用者先前瀏覽本網站或其他網站的經驗來放送廣告。</li>
-                <li>Google 使用廣告 Cookie，可讓 Google 及其合作夥伴根據使用者瀏覽本網站和/或網路上其他網站的經驗，對使用者放送廣告。</li>
-                <li>使用者可以前往 <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener noreferrer">廣告設定</a>，選擇停用個人化廣告。或者，您也可以前往 <a href="https://www.aboutads.info/choices/" target="_blank" rel="noopener noreferrer">www.aboutads.info/choices/</a>，選擇停用第三方供應商的個人化廣告 Cookie。</li>
-            </ul>
-            <ul>
-                <li>Third party vendors, including Google, use cookies to serve ads based on a user's prior visits to our website or other websites.</li>
-                <li>Google's use of advertising cookies enables it and its partners to serve ads to our users based on their visit to our sites and/or other sites on the Internet.</li>
-                <li>Users may opt out of personalized advertising by visiting <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener noreferrer">Ads Settings</a>. Alternatively, you can opt out of a third-party vendor's use of cookies for personalized advertising by visiting <a href="https://www.aboutads.info/choices/" target="_blank" rel="noopener noreferrer">www.aboutads.info/choices/</a>.</li>
-            </ul>
-
-            <h2>本政策的變更 (Changes to This Privacy Policy)</h2>
-            <p>我們可能會不定時更新本隱私權政策。如有任何變更，我們會在此頁面上發布新的政策。建議您定期查看本頁面以獲取最新資訊。</p>
-            <p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page. You are advised to review this Privacy Policy periodically for any changes.</p>
+            <h2>第三方服務 (Third-Party Services)</h2>
+            <p>我們使用 Google AdSense 來投放廣告，以支持本網站的營運。Google 作為第三方供應商，會使用 Cookie 來放送廣告。您可以透過訪問 Google 的廣告設定頁面，來管理您的廣告偏好設定並選擇停用個人化廣告。</p>
+            <p>We use Google AdSense to serve ads to support this site. As a third-party vendor, Google uses cookies to serve ads. You can manage your ad preferences and opt out of personalized advertising by visiting Google's Ads Settings page.</p>
             
-            <h2>聯絡我們 (Contact Us)</h2>
-            <p>如果您對本隱私權政策有任何疑問，歡迎隨時聯絡我們。請參閱我們的「關於我們」頁面以獲取聯絡資訊。</p>
-            <p>If you have any questions about this Privacy Policy, please contact us. Please refer to our "About Us" page for contact information.</p>
-        </main>
+            <h2>政策更新 (Policy Updates)</h2>
+            <p>本隱私權政策可能會不時更新。任何變更都會在此頁面上發布，並在發布後立即生效。我們建議您定期查看此頁面。</p>
+            <p>This Privacy Policy may be updated from time to time. Any changes will be posted on this page and are effective immediately after they are posted. We recommend that you review this page periodically.</p>
 
-        <footer>
+            <hr style="border: none; border-top: 1px solid var(--border-color); margin: 20px 0;">
+            <p style="text-align: center;">
+                <a href="./index.html">返回計算機 (Back to Calculator)</a>
+            </p>
+        </main>
+        
+        <footer class="container">
             <div class="footer-links">
-                <a href="index.html">回到首頁 (Home)</a>
-                <span>&nbsp;•&nbsp;</span>
-                <a href="about.html">關於我們 (About Us)</a>
+                <a href="./about.html">關於我們 (About)</a>
+                <a href="./privacy-policy.html">隱私權政策 (Privacy)</a>
             </div>
             <div class="copyright">
-                &copy; 2025 餐飲單位換算小幫手 - Culinary Unit Conversion Helper. All rights reserved.
+                 &copy; 2025 餐飲單位換算小幫手 - Culinary Unit Conversion Helper. All rights reserved.
             </div>
         </footer>
     </div>
-
 </body>
 </html>
+
