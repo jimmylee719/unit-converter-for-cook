@@ -31,19 +31,16 @@
     
     <!-- CSS 樣式 -->
     <style>
-        /* CSS 變數，方便統一管理顏色與字體 */
         :root {
-            --bg-color: #f8f9fa; /* 頁面背景色 */
-            --card-bg-color: #ffffff; /* 卡片背景色 */
-            --text-color: #212529; /* 主要文字顏色 */
-            --secondary-text-color: #6c757d; /* 次要文字顏色 */
-            --accent-color: #007bff; /* 強調色，如邊框、焦點 */
-            --border-color: #dee2e6; /* 邊框顏色 */
-            --shadow-color: rgba(0, 0, 0, 0.05); /* 陰影顏色 */
-            --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif; /* 使用系統預設字體，現代且高效 */
+            --bg-color: #f8f9fa;
+            --card-bg-color: #ffffff;
+            --text-color: #212529;
+            --secondary-text-color: #6c757d;
+            --accent-color: #007bff;
+            --border-color: #dee2e6;
+            --shadow-color: rgba(0, 0, 0, 0.05);
+            --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
         }
-
-        /* 基本頁面設定 (Mobile-First) */
         body {
             font-family: var(--font-family);
             background-color: var(--bg-color);
@@ -56,33 +53,17 @@
             min-height: 100vh;
             box-sizing: border-box;
         }
-
-        /* 主要容器 */
         .container {
             width: 100%;
-            max-width: 600px; /* 在大螢幕上限制最大寬度，避免內容拉太開 */
+            max-width: 600px;
             flex-grow: 1;
         }
-
-        /* 頁首 */
         header {
             text-align: center;
             margin-bottom: 30px;
         }
-
-        header h1 {
-            font-size: 2rem;
-            margin: 0;
-        }
-
-        header h2 {
-            font-size: 1.2rem;
-            font-weight: 400;
-            color: var(--secondary-text-color);
-            margin: 5px 0 0 0;
-        }
-
-        /* 換算器主卡片 */
+        header h1 { font-size: 2rem; margin: 0; }
+        header h2 { font-size: 1.2rem; font-weight: 400; color: var(--secondary-text-color); margin: 5px 0 0 0; }
         main {
             background-color: var(--card-bg-color);
             border-radius: 12px;
@@ -90,23 +71,9 @@
             box-shadow: 0 4px 15px var(--shadow-color);
             border: 1px solid var(--border-color);
         }
-
-        /* 每一組換算列 (包含輸入框和下拉選單) */
-        .converter-row {
-            display: flex;
-            gap: 15px; /* 元素之間的間距 */
-        }
-
-        .converter-row input {
-            flex: 1; /* 讓輸入框佔據更多空間 */
-            min-width: 0; /* 解決 flex item 壓縮問題 */
-        }
-        
-        .converter-row select {
-            flex: 1;
-        }
-
-        /* 輸入框和下拉選單的通用樣式 */
+        .converter-row { display: flex; gap: 15px; }
+        .converter-row input { flex: 1; min-width: 0; }
+        .converter-row select { flex: 1; }
         input[type="number"], select {
             width: 100%;
             padding: 12px 15px;
@@ -116,33 +83,25 @@
             background-color: #fff;
             transition: border-color 0.2s, box-shadow 0.2s;
         }
-
         input[type="number"]:focus, select:focus {
             outline: none;
             border-color: var(--accent-color);
             box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
         }
-        
-        /* 移除 number input 預設的上下箭頭 (在某些瀏覽器) */
         input[type=number]::-webkit-inner-spin-button, 
         input[type=number]::-webkit-outer-spin-button { 
           -webkit-appearance: none; 
           margin: 0; 
         }
-        input[type=number] {
-          -moz-appearance: textfield;
-        }
-
-        /* 中間的交換圖示區域 */
+        input[type=number] { -moz-appearance: textfield; }
         .swap-container {
             display: flex;
             justify-content: center;
             align-items: center;
             margin: 15px 0;
-            gap: 20px; /* 新增：按鈕之間的間距 */
+            gap: 20px;
         }
-
-        #swap-button, #reset-button { /* 新增：讓重設按鈕樣式與交換按鈕一致 */
+        #swap-button, #reset-button {
             background: none;
             border: 1px solid var(--border-color);
             border-radius: 50%;
@@ -155,24 +114,10 @@
             transition: background-color 0.2s, transform 0.2s;
             color: var(--secondary-text-color);
         }
-        
-        #swap-button:hover, #reset-button:hover { /* 新增：hover 效果 */
-            background-color: var(--bg-color);
-        }
-
-        #swap-button:active {
-            transform: scale(0.95) rotate(180deg);
-        }
-
-        #reset-button:active { /* 新增：讓重設按鈕也有下壓與旋轉的動畫 */
-            transform: scale(0.95) rotate(-180deg);
-        }
-        
-        #swap-button svg {
-            transform: rotate(90deg); /* 將左右箭頭旋轉90度變為上下箭頭 */
-        }
-        
-        /* Google Ad 廣告容器 */
+        #swap-button:hover, #reset-button:hover { background-color: var(--bg-color); }
+        #swap-button:active { transform: scale(0.95) rotate(180deg); }
+        #reset-button:active { transform: scale(0.95) rotate(-180deg); }
+        #swap-button svg { transform: rotate(90deg); }
         #google-ad-container {
             width: 100%;
             min-height: 50px;
@@ -187,8 +132,6 @@
             border-radius: 8px;
             box-sizing: border-box;
         }
-
-        /* 頁尾 */
         footer {
             text-align: center;
             margin-top: 40px;
@@ -196,15 +139,21 @@
             color: var(--secondary-text-color);
             font-size: 0.9rem;
         }
-        
-        /* 響應式設計：當螢幕寬度大於 768px (平板和電腦) */
+        /* 更新頁尾連結樣式 */
+        .footer-links {
+            margin-bottom: 10px;
+        }
+        .footer-links a {
+            color: var(--secondary-text-color);
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
         @media (min-width: 768px) {
-            header h1 {
-                font-size: 2.5rem;
-            }
-            main {
-                padding: 40px;
-            }
+            header h1 { font-size: 2.5rem; }
+            main { padding: 40px; }
         }
     </style>
 </head>
@@ -232,7 +181,6 @@
                       <path fill-rule="evenodd" d="M1 11.5a.5.5 0 0 0 .5.5h11.793l-3.147 3.146a.5.5 0 0 0 .708.708l4-4a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 11H1.5a.5.5 0 0 0-.5.5m14-7a.5.5 0 0 1-.5.5H2.707l3.147-3.146a.5.5 0 1 1-.708-.708l-4 4a.5.5 0 0 1 0 .708l4 4a.5.5 0 1 1 .708-.708L2.707 5.5H14.5a.5.5 0 0 1 .5-.5"/>
                     </svg>
                 </button>
-                <!-- 新增的重設按鈕 -->
                 <button id="reset-button" title="清除重設 (Clear & Reset)">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
                       <path fill-rule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2z"/>
@@ -256,22 +204,21 @@
 
     </div>
 
-    <!-- 4. 頁尾區 -->
+    <!-- 4. 頁尾區 (已更新) -->
     <footer>
-        &copy; 2025 餐飲單位換算小幫手 - Culinary Unit Conversion Helper. All rights reserved.
+        <div class="footer-links">
+            <a href="about.html">關於我們 (About Us)</a>
+            <span>&nbsp;•&nbsp;</span>
+            <a href="privacy-policy.html">隱私權政策 (Privacy Policy)</a>
+        </div>
+        <div class="copyright">
+            &copy; 2025 餐飲單位換算小幫手 - Culinary Unit Conversion Helper. All rights reserved.
+        </div>
     </footer>
 
     <!-- JavaScript 邏輯 -->
     <script>
         // --- 程式碼開始 ---
-
-        // 1. 定義所有單位的換算基準
-        // 我將所有單位都換算成一個共同的「基礎單位」，方便計算。
-        // 重量 -> 公克 (g)
-        // 容量 -> 毫升 (ml)
-        // 溫度 -> 攝氏 (°C)
-        // 能量 -> 卡路里 (kcal)
-        // 長度 -> 公分 (cm)
         const units = {
             weight: {
                 label: '重量 (Weight)',
@@ -330,19 +277,16 @@
             }
         };
 
-        // 2. 取得頁面上的 HTML 元素
         const inputA = document.getElementById('inputA');
         const selectA = document.getElementById('selectA');
         const inputB = document.getElementById('inputB');
         const selectB = document.getElementById('selectB');
         const swapButton = document.getElementById('swap-button');
-        const resetButton = document.getElementById('reset-button'); // 新增：取得重設按鈕
+        const resetButton = document.getElementById('reset-button');
         
-        let lastActiveInput = inputA; // 追蹤最後一個被更動的輸入框
+        let lastActiveInput = inputA;
 
-        // 3. 核心換算函式
         function calculate() {
-            // 決定換算方向
             const sourceInput = lastActiveInput === inputA ? inputA : inputB;
             const sourceSelect = lastActiveInput === inputA ? selectA : selectB;
             const targetInput = lastActiveInput === inputA ? inputB : inputA;
@@ -360,33 +304,22 @@
             const categoryFrom = findCategory(unitFrom);
             let categoryTo = findCategory(unitTo);
 
-            // 如果單位類別不同，自動將目標單位同步到來源單位所在的類別
             if (categoryFrom !== categoryTo) {
                 const newCategoryUnits = Object.keys(units[categoryFrom].conversions);
-                // 從新類別中選擇一個預設單位
-                // 如果第一個單位和來源單位相同，就選擇第二個 (如果存在的話)
                 let newTargetUnit = newCategoryUnits[0];
                 if (newCategoryUnits.length > 1 && newTargetUnit === unitFrom) {
                     newTargetUnit = newCategoryUnits[1];
                 }
                 targetSelect.value = newTargetUnit;
-                // 為本次計算更新目標單位及其類別
                 unitTo = newTargetUnit;
             }
 
             const categoryData = units[categoryFrom];
-            
-            // 步驟 1: 將來源數值換算成「基礎單位」
             const baseValue = categoryData.conversions[unitFrom].toBase(val);
-            
-            // 步驟 2: 將「基礎單位」的數值換算成目標單位
             const targetValue = categoryData.conversions[unitTo].fromBase(baseValue);
-            
-            // 顯示結果，並處理小數點，最多保留5位
             targetInput.value = parseFloat(targetValue.toFixed(5));
-        }
+}
 
-        // 輔助函式：根據單位 key (如'kg') 找到其所屬的類別 (如'weight')
         function findCategory(unitKey) {
             for (const category in units) {
                 if (units[category].conversions[unitKey]) {
@@ -396,7 +329,6 @@
             return null;
         }
 
-        // 4. 動態生成下拉選單內容
         function populateSelects() {
             [selectA, selectB].forEach(selectElement => {
                 selectElement.innerHTML = '';
@@ -414,59 +346,35 @@
             });
         }
         
-        // 交換單位的功能
         function swapUnits() {
             const tempSelectValue = selectA.value;
             selectA.value = selectB.value;
             selectB.value = tempSelectValue;
-            
-            // 交換後，以 A 為基準重新計算
             lastActiveInput = inputA;
             calculate();
         }
 
-        // 新增：重設換算器的功能
         function resetConverter() {
             inputA.value = '1';
             lastActiveInput = inputA;
             calculate();
         }
 
-        // 5. 綁定事件監聽器
-        inputA.addEventListener('input', () => {
-            lastActiveInput = inputA;
-            calculate();
-        });
-        inputB.addEventListener('input', () => {
-            lastActiveInput = inputB;
-            calculate();
-        });
-        selectA.addEventListener('change', () => {
-            // 當 A 的單位改變，我們視 A 為換算來源，並觸發計算
-            lastActiveInput = inputA;
-            calculate();
-        });
-        selectB.addEventListener('change', () => {
-            // 當 B 的單位改變，我們視 B 為換算來源，並觸發計算
-            lastActiveInput = inputB;
-            calculate();
-        });
+        inputA.addEventListener('input', () => { lastActiveInput = inputA; calculate(); });
+        inputB.addEventListener('input', () => { lastActiveInput = inputB; calculate(); });
+        selectA.addEventListener('change', () => { lastActiveInput = inputA; calculate(); });
+        selectB.addEventListener('change', () => { lastActiveInput = inputB; calculate(); });
         swapButton.addEventListener('click', swapUnits);
-        resetButton.addEventListener('click', resetConverter); // 新增：綁定點擊事件
+        resetButton.addEventListener('click', resetConverter);
         
-        // 6. 頁面初始化函式
         function initialize() {
             populateSelects();
-            // 設定預設單位
             selectA.value = 'oz';
             selectB.value = 'g';
-            // 執行第一次換算
             calculate();
         }
 
-        // 當 DOM 載入完成後，執行初始化
         document.addEventListener('DOMContentLoaded', initialize);
-
     </script>
 </body>
 </html>
