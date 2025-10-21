@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>關於我們 - 餐飲單位換算小幫手</title>
-    <!-- 沿用主頁的 CSS 樣式，確保風格一致 -->
+    <!-- 引用與主頁相同的樣式 -->
     <style>
         :root {
             --bg-color: #f8f9fa;
             --card-bg-color: #ffffff;
             --text-color: #212529;
             --secondary-text-color: #6c757d;
-            --accent-color: #007bff;
+            --accent-color: #007bff; /* 沿用單位換算小幫手的藍色主題 */
             --border-color: #dee2e6;
             --shadow-color: rgba(0, 0, 0, 0.05);
             --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
@@ -25,38 +25,45 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            min-height: 100vh;
             box-sizing: border-box;
+            min-height: 100vh;
         }
         .container {
             width: 100%;
             max-width: 800px;
             flex-grow: 1;
         }
-        header {
-            text-align: center;
-            margin-bottom: 30px;
-        }
+        header { text-align: center; margin-bottom: 20px; }
         header h1 { font-size: 2.2rem; margin: 0; }
-        main {
+        .card {
             background-color: var(--card-bg-color);
             border-radius: 12px;
-            padding: 25px 35px;
+            padding: 30px;
             box-shadow: 0 4px 15px var(--shadow-color);
             border: 1px solid var(--border-color);
+            margin-bottom: 20px;
             line-height: 1.8;
-            text-align: center; /* 讓內容置中 */
         }
-        main h2 { color: var(--text-color); border-bottom: 1px solid var(--border-color); padding-bottom: 10px; }
-        main p { color: var(--secondary-text-color); }
-        main a { color: var(--accent-color); text-decoration: none; font-weight: bold; }
-        main a:hover { text-decoration: underline; }
-        footer {
-            text-align: center;
-            margin-top: 40px;
-            padding-bottom: 20px;
-            color: var(--secondary-text-color);
+        .card h2 {
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 15px;
+            margin-top: 0;
+        }
+        .card a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .card a:hover {
+            text-decoration: underline;
+        }
+        footer { 
+            text-align: center; 
+            margin-top: 40px; 
+            padding: 20px 0; 
+            color: var(--secondary-text-color); 
             font-size: 0.9rem;
+            border-top: 1px solid var(--border-color);
         }
         .footer-links { margin-bottom: 10px; }
         .footer-links a { color: var(--secondary-text-color); text-decoration: none; margin: 0 10px; }
@@ -64,46 +71,45 @@
     </style>
 </head>
 <body>
-
     <div class="container">
         <header>
             <h1>關於我們 (About Us)</h1>
         </header>
 
-        <main>
-            <h2>我們的使命 (Our Mission)</h2>
+        <main class="card">
+            <h2>我們的目標 (Our Goal)</h2>
             <p>
-                我們的使命是為全球的專業廚師、烘焙師與美食愛好者，提供一個最快速、直觀且準確的餐飲單位換算工具。我們發現在處理來自不同國家（尤其是亞洲與歐美）的食譜時，單位換算總是一個惱人且容易出錯的環節。因此，我們創造了這個小幫手，希望能為您的烹飪之旅掃除障礙。
+                「餐飲單位換算小幫手」旨在提供一個快速、直觀且無干擾的單位換算工具，專為全球的餐飲專業人士與料理愛好者設計。我們相信，一個好的工具應該是簡單而強大的，讓您能專注於您的創作，而不是繁瑣的換算。
             </p>
             <p>
-                Our mission is to provide the fastest, most intuitive, and accurate culinary unit conversion tool for professional chefs, bakers, and food enthusiasts worldwide. We found that unit conversion is often an annoying and error-prone step when dealing with recipes from different countries (especially between Asia, Europe, and America). Therefore, we created this helper to remove barriers on your culinary journey.
+                The "Culinary Unit Conversion Helper" aims to provide a fast, intuitive, and distraction-free unit conversion tool designed for culinary professionals and cooking enthusiasts worldwide. We believe a good tool should be simple yet powerful, allowing you to focus on your creations, not on tedious conversions.
             </p>
 
             <h2>聯絡我們 (Contact Us)</h2>
             <p>
-                我們致力於不斷改進這個工具。如果您有任何問題、功能建議或合作意願，歡迎隨時透過以下電子郵件與我們聯繫。
+                如果您有任何問題或功能建議，歡迎隨時透過電子郵件與我們聯繫。
+                <br>
+                If you have any questions or feature suggestions, please feel free to contact us via email.
             </p>
             <p>
-                We are committed to continuously improving this tool. If you have any questions, feature suggestions, or opportunities for collaboration, please feel free to contact us at the email address below.
+                <strong>Email:</strong> <a href="mailto:skadoosh.ai.lab@gmail.com">skadoosh.ai.lab@gmail.com</a>
             </p>
-            <p>
-                <!-- **已更新為您的 Email** -->
-                <a href="mailto:skadoosh.ai.lab@gmail.com">skadoosh.ai.lab@gmail.com</a>
+            <hr style="border: none; border-top: 1px solid var(--border-color); margin: 20px 0;">
+            <p style="text-align: center;">
+                <a href="./index.html">返回計算機 (Back to Calculator)</a>
             </p>
         </main>
-
-        <footer>
+        
+        <footer class="container">
             <div class="footer-links">
-                <a href="index.html">回到首頁 (Home)</a>
-                <span>&nbsp;•&nbsp;</span>
-                <a href="privacy-policy.html">隱私權政策 (Privacy Policy)</a>
+                <a href="./about.html">關於我們 (About)</a>
+                <a href="./privacy-policy.html">隱私權政策 (Privacy)</a>
             </div>
             <div class="copyright">
-                &copy; 2025 餐飲單位換算小幫手 - Culinary Unit Conversion Helper. All rights reserved.
+                 &copy; 2025 餐飲單位換算小幫手 - Culinary Unit Conversion Helper. All rights reserved.
             </div>
         </footer>
     </div>
-
 </body>
 </html>
 
